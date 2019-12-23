@@ -63,4 +63,19 @@ public class SquadTest {
         allSquads.add(newSquad2);
         assertTrue(allSquads.contains(newSquad));
     }
+    @Test
+    public void storesId_int(){
+        Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
+        assertEquals(1, newSquad.getId());
+    }
+    @Test
+    public void findSquadById_int(){
+        List<Squad> allSquads = new ArrayList<>();
+        Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
+        Squad newSquad2 = new Squad("Avengers",5,"Reverse the snap");
+        allSquads.add(newSquad);
+        allSquads.add(newSquad2);
+        assertEquals(1, Squad.findSquad(newSquad.getId()).getId());
+
+    }
 }

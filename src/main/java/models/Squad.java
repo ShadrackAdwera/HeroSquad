@@ -7,6 +7,7 @@ public class Squad {
     private String name;
     private int maxSize;
     private String cause;
+    private int id;
     private List<Hero> heroMembers;
     private static List<Squad> allSquads = new ArrayList<>();
 
@@ -16,6 +17,8 @@ public class Squad {
         this.cause = cause;
         this.heroMembers = new ArrayList<>();
         allSquads.add(this);
+        this.id = allSquads.size();
+
     }
 
     public String getName() {
@@ -28,6 +31,13 @@ public class Squad {
 
     public String getCause() {
         return cause;
+    }
+
+    public int getId() {
+        return id;
+    }
+    public static Squad findSquad(int id){
+        return allSquads.get(id-1);
     }
 
     public void addHeroToSquad(Hero newHero){
