@@ -50,4 +50,7 @@ public class Squad {
     public static List<Squad> getAllSquads() {
         return allSquads;
     }
+    public static void clearAll(){
+        allSquads.clear();
+    }
 }
