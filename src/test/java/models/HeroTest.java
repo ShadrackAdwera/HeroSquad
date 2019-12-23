@@ -2,6 +2,9 @@ package models;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class HeroTest {
@@ -39,5 +42,14 @@ public class HeroTest {
     public void squadMember_boolean() {
         Hero testValue = new Hero("Batman",38, "Rich","Human");
         assertFalse(testValue.squadMember());
+    }
+    @Test
+    public void returnAllHeroes_int(){
+        List<Hero> allHeroes = new ArrayList<>();
+        Hero testValue = new Hero("Batman",38, "Rich","Human");
+        Hero testValue2 = new Hero("Superman",200, "Super Strength","Kryptonite");
+        allHeroes.add(testValue);
+        allHeroes.add(testValue2);
+        assertEquals(2, Hero.all().size());
     }
 }
