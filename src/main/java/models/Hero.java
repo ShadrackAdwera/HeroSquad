@@ -13,6 +13,25 @@ public class Hero {
         this.weakness = weakness;
         this.squad = false;
     }
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getSuperPowers() {
+        return superPowers;
+    }
+
+    public String getWeakness() {
+        return weakness;
+    }
+
+    public boolean squadMember() {
+        return squad;
+    }
 
 
 }
