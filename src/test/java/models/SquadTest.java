@@ -81,7 +81,7 @@ public class SquadTest {
         Squad newSquad2 = new Squad("Avengers",5,"Reverse the snap");
         allSquads.add(newSquad);
         allSquads.add(newSquad2);
-        assertEquals(1, Squad.findSquad(newSquad.getId()).getId());
+        assertEquals(2, Squad.findSquad(newSquad2.getId()).getId());
 
     }
 }
