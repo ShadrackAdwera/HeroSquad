@@ -27,19 +27,19 @@ public class App {
             model.put("hero", heroes);
             return new ModelAndView(model,"index.hbs");
         }, new HandlebarsTemplateEngine());
-        //get: delete all heroes
-        get("/heroes/delete", (request, response) -> {
+        //get: delete all squads and all heroes
+        get("/squads/delete", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
+            squadDao.deleteAllSquads();
             heroDao.deleteAllHeroes();
             response.redirect("/");
             return null;
         }, new HandlebarsTemplateEngine());
 
-        //get: delete a hero
-        get("/heroes/:id/delete", (request, response) -> {
+        //get: delete all heroes
+        get("/heroes/delete", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            int heroToDelete = Integer.parseInt(request.params("id"));
-            heroDao.deleteHero(heroToDelete);
+            heroDao.deleteAllHeroes();
             response.redirect("/");
             return null;
         }, new HandlebarsTemplateEngine());
