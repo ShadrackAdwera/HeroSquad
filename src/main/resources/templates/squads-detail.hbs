@@ -1,0 +1,13 @@
+{{#partial "content"}}
+    <h1>{{squad.name}}</h1>
+    <p>Members :</p>
+    <ul>
+        {{#each hero}}
+            <li>
+                <p><a href="/squads/{{squad.id}}/heroes/{{id}}">{{name}}</a></p>
+            </li>
+        {{/each}}
+    </ul>
+    <a href="/categories/{{squad.id}}/delete">DELETE this Squad</a>
+{{/partial}}
+{{>layout.hbs}}

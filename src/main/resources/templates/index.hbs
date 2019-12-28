@@ -1,4 +1,11 @@
 {{#partial "content"}}
-<p>Hello</p>
+    {{#if hero}}
+        {{#each hero }}
+            <p><a href="/squads/{{squadId}}/heroes/{{id}}">{{name}}</a></p>
+        {{/each}}
+        <a href="/heroes/delete">Delete All Heroes</a>
+    {{else}}
+        <p>No hero!</p>
+    {{/if}}
 {{/partial}}
 {{>layout.hbs}}
