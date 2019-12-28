@@ -1,7 +1,6 @@
 package models;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Objects;
 
 public class Hero {
     private String name;
@@ -15,6 +14,23 @@ public class Hero {
         this.superPowers = superPowers;
         this.weakness = weakness;
         this.squad = false;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Hero)) return false;
+        Hero hero = (Hero) o;
+        return getAge() == hero.getAge() &&
+                squad == hero.squad &&
+                Objects.equals(getName(), hero.getName()) &&
+                Objects.equals(getSuperPowers(), hero.getSuperPowers()) &&
+                Objects.equals(getWeakness(), hero.getWeakness());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getAge(), getSuperPowers(), getWeakness(), squad);
     }
 
     public void setName(String name) {
