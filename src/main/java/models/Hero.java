@@ -16,6 +16,27 @@ public class Hero {
         this.weakness = weakness;
         this.squad = false;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setSuperPowers(String superPowers) {
+        this.superPowers = superPowers;
+    }
+
+    public void setWeakness(String weakness) {
+        this.weakness = weakness;
+    }
+
+    public void setSquad(boolean squad) {
+        this.squad = squad;
+    }
+
     public String getName() {
         return name;
     }

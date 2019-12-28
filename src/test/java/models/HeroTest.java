@@ -43,13 +43,4 @@ public class HeroTest {
         Hero testValue = new Hero("Batman",38, "Rich","Human");
         assertFalse(testValue.squadMember());
     }
-    @Test
-    public void returnAllHeroes_int(){
-        List<Hero> allHeroes = new ArrayList<>();
-        Hero testValue = new Hero("Batman",38, "Rich","Human");
-        Hero testValue2 = new Hero("Superman",200, "Super Strength","Kryptonite");
-        allHeroes.add(testValue);
-        allHeroes.add(testValue2);
-        assertEquals(2, Hero.all().size());
-    }
 }
