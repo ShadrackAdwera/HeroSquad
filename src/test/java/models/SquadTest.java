@@ -12,7 +12,6 @@ public class SquadTest {
 
     @Before
     public void setUp() throws Exception {
-        Squad.clearAll();
     }
 
     @Test
@@ -76,12 +75,7 @@ public class SquadTest {
     }
     @Test
     public void findSquadById_int(){
-        List<Squad> allSquads = new ArrayList<>();
-        Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
-        Squad newSquad2 = new Squad("Avengers",5,"Reverse the snap");
-        allSquads.add(newSquad);
-        allSquads.add(newSquad2);
-        assertEquals(2, Squad.findSquad(newSquad2.getId()).getId());
+
 
     }
 }
