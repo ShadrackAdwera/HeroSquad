@@ -5,19 +5,14 @@ import java.util.List;
 
 public class Squad {
     private String name;
-    private int maxSize;
+    private int size;
     private String cause;
     private int id;
-    private List<Hero> heroMembers;
-    private static List<Squad> allSquads = new ArrayList<>();
 
-    public Squad(String name, int maxSize, String cause){
+    public Squad(String name, int size, String cause){
         this.name = name;
-        this.maxSize = maxSize;
+        this.size = size;
         this.cause = cause;
-        this.heroMembers = new ArrayList<>();
-        allSquads.add(this);
-        this.id = allSquads.size();
 
     }
 
@@ -26,7 +21,7 @@ public class Squad {
     }
 
     public int getMaxSize() {
-        return maxSize;
+        return size;
     }
 
     public String getCause() {
@@ -35,22 +30,5 @@ public class Squad {
 
     public int getId() {
         return id;
-    }
-    public static Squad findSquad(int id){
-        return allSquads.get(id-1);
-    }
-
-    public void addHeroToSquad(Hero newHero){
-        heroMembers.add(newHero);
-    }
-
-    public List<Hero> getAllHeroesInSquad(){
-        return heroMembers;
-    }
-    public static List<Squad> getAllSquads() {
-        return allSquads;
-    }
-    public static void clearAll(){
-        allSquads.clear();
     }
 }
