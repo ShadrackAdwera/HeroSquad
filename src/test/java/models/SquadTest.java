@@ -16,28 +16,28 @@ public class SquadTest {
 
     @Test
     public void instantiatesCorrectly_boolean(){
-        Hero testValue = new Hero("Batman",38, "Rich","Human");
+        Hero testValue = new Hero("Batman",38, "Rich","Human",1);
         Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
         assertTrue(newSquad instanceof Squad);
     }
 
     @Test
     public void storeSquadName_String() {
-        Hero testValue = new Hero("Batman",38, "Rich","Human");
+        Hero testValue = new Hero("Batman",38, "Rich","Human",1);
         Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
         assertEquals("Justice League", newSquad.getName());
     }
 
     @Test
     public void getSizeOfEachSquad_int() {
-        Hero testValue = new Hero("Batman",38, "Rich","Human");
+        Hero testValue = new Hero("Batman",38, "Rich","Human",1);
         Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
         assertEquals(5, newSquad.getMaxSize());
     }
 
     @Test
     public void getCauseOfSquad_String() {
-        Hero testValue = new Hero("Batman",38, "Rich","Human");
+        Hero testValue = new Hero("Batman",38, "Rich","Human",1);
         Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
         assertEquals("Eliminate Doomsday", newSquad.getCause());
     }
@@ -45,15 +45,15 @@ public class SquadTest {
     @Test
     public void addHeroToSquad_List() {
         List<Hero> newHeroes = new ArrayList<>();
-        Hero testValue = new Hero("Batman",38, "Rich","Human");
+        Hero testValue = new Hero("Batman",38, "Rich","Human",1);
         Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
 
     }
     @Test
     public void getAllHeroesInSquad_List(){
         List<Hero> allHeroesInSquad = new ArrayList<>();
-        Hero testValue = new Hero("Batman",38, "Rich","Human");
-        Hero testValue2 = new Hero("Flash",31, "Super Speed","Iris West");
+        Hero testValue = new Hero("Batman",38, "Rich","Human",1);
+        Hero testValue2 = new Hero("Flash",31, "Super Speed","Iris West",1);
         Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
         allHeroesInSquad.add(testValue);
         allHeroesInSquad.add(testValue2);

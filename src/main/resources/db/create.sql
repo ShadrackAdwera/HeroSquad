@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS hero (
   SquadId INTEGER
 );
 
-CREATE TABLE IF NOT EXISTS squad (
+CREATE TABLE IF NOT EXISTS squads (
   id int PRIMARY KEY auto_increment,
   Name VARCHAR,
   MaxSize INTEGER,

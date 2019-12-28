@@ -4,13 +4,12 @@ import java.util.Objects;
 
 public class Squad {
     private String name;
-    private int size;
+    private int maxSize;
     private String cause;
     private int id;
-
-    public Squad(String name, int size, String cause){
+    public Squad(String name, int maxSize, String cause){
         this.name = name;
-        this.size = size;
+        this.maxSize = maxSize;
         this.cause = cause;
     }
 
@@ -18,28 +17,20 @@ public class Squad {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Squad)) return false;
-        Squad squad = (Squad) o;
-        return size == squad.size &&
-                getId() == squad.getId() &&
-                Objects.equals(getName(), squad.getName()) &&
-                Objects.equals(getCause(), squad.getCause());
+        Squad squads = (Squad) o;
+        return getMaxSize() == squads.getMaxSize() &&
+                getId() == squads.getId() &&
+                Objects.equals(getName(), squads.getName()) &&
+                Objects.equals(getCause(), squads.getCause());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getName(), size, getCause(), getId());
+        return Objects.hash(getName(), getMaxSize(), getCause(), getId());
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
-
-    public void setCause(String cause) {
-        this.cause = cause;
+    public int getId() {
+        return id;
     }
 
     public void setId(int id) {
@@ -50,15 +41,23 @@ public class Squad {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public int getMaxSize() {
-        return size;
+        return maxSize;
+    }
+
+    public void setMaxSize(int maxSize) {
+        this.maxSize = maxSize;
     }
 
     public String getCause() {
         return cause;
     }
 
-    public int getId() {
-        return id;
+    public void setCause(String cause) {
+        this.cause = cause;
     }
 }
