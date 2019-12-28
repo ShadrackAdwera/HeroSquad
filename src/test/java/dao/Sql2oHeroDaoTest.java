@@ -38,13 +38,13 @@ public class Sql2oHeroDaoTest {
         heroDao.addHero(newHero); //add to dao (takes care of saving)
         assertEquals(1, heroDao.allHeroes().size());
     }
-//    @Test
-//    public void squadIdReturnedCorrectly() throws Exception{
-//        Hero newHero = setUpHero();
-//        int heroSquadId = newHero.getSquadId();
-//        heroDao.addHero(newHero);
-//        assertEquals(heroSquadId, heroDao.findById(newHero.getId()).getSquadId());
-//    }
+    @Test
+    public void squadIdReturnedCorrectly() throws Exception{
+        Hero newHero = setUpHero();
+        int heroSquadId = newHero.getSquadId();
+        heroDao.addHero(newHero);
+        assertEquals(heroSquadId, heroDao.findById(newHero.getId()).getSquadId());
+    }
 
     @After
     public void tearDown() throws Exception {
@@ -52,6 +52,6 @@ public class Sql2oHeroDaoTest {
     }
     //helper method
     public Hero setUpHero(){
-        return new Hero("Pete Casteglioni", 42,"The Punisher","No weakness");
+        return new Hero("Pete Casteglioni", 42,"The Punisher","No weakness",1);
     }
 }

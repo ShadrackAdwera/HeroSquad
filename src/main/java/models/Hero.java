@@ -9,12 +9,14 @@ public class Hero {
     private String weakness;
     private boolean squad;
     private int id;
-    public Hero(String name, int age, String superPowers, String weakness){
+    private int squadId;
+    public Hero(String name, int age, String superPowers, String weakness, int squadId){
         this.name = name;
         this.age = age;
         this.superPowers = superPowers;
         this.weakness = weakness;
         this.squad = false;
+        this.squadId = squadId;
     }
 
     @Override
@@ -25,6 +27,7 @@ public class Hero {
         return getAge() == hero.getAge() &&
                 squad == hero.squad &&
                 getId() == hero.getId() &&
+                getSquadId() == hero.getSquadId() &&
                 Objects.equals(getName(), hero.getName()) &&
                 Objects.equals(getSuperPowers(), hero.getSuperPowers()) &&
                 Objects.equals(getWeakness(), hero.getWeakness());
@@ -32,7 +35,15 @@ public class Hero {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getName(), getAge(), getSuperPowers(), getWeakness(), squad, getId());
+        return Objects.hash(getName(), getAge(), getSuperPowers(), getWeakness(), squad, getId(), getSquadId());
+    }
+
+    public int getSquadId() {
+        return squadId;
+    }
+
+    public void setSquadId(int squadId) {
+        this.squadId = squadId;
     }
 
     public int getId() {
