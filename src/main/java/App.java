@@ -139,6 +139,14 @@ public class App {
             return new ModelAndView(model, "squads-detail.hbs");
         }, new HandlebarsTemplateEngine());
 
+        //get: display coming soon
+        get("/wars",(request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            List<Squad> squads = squadDao.getAllSquads();
+            model.put("squads", squads);
+            return new ModelAndView(model, "wars.hbs");
+        }, new HandlebarsTemplateEngine());
+
     }
 
 }
