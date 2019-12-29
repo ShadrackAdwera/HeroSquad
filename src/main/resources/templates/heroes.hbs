@@ -1,6 +1,6 @@
 {{#partial "content"}}
     <form action="/heroes" method="post">
-        {{#if squad}}
+        {{#if squads}}
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" name="name" id="name" class="form-control">
@@ -20,7 +20,7 @@
         <div class="form-group">
             <label for="squadId">Assign to squad</label>
             <select id="squadId" name="squadId">
-                {{#each squad}}
+                {{#each squads}}
                     <option value="{{id}}">{{name}}</option>
                 {{/each}}
             </select>

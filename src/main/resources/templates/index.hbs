@@ -1,6 +1,6 @@
 {{#partial "content"}}
-    {{#if hero}}
-        {{#each hero }}
+    {{#if heroes}}
+        {{#each heroes }}
             <p><a href="/squads/{{squadId}}/heroes/{{id}}">{{name}}</a></p>
         {{/each}}
         <a href="/heroes/delete">Delete All Heroes</a>

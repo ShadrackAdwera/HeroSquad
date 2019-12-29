@@ -24,7 +24,7 @@ public class App {
             List<Squad> squads = squadDao.getAllSquads();
             model.put("squads", squads);
             List<Hero> heroes = heroDao.allHeroes();
-            model.put("hero", heroes);
+            model.put("heroes", heroes);
             return new ModelAndView(model,"index.hbs");
         }, new HandlebarsTemplateEngine());
         //get: delete all squads and all heroes
@@ -43,7 +43,23 @@ public class App {
             response.redirect("/");
             return null;
         }, new HandlebarsTemplateEngine());
+        //get: delete a hero
+        get("/squads/:squadId/heroes/:heroId/delete", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            int idOfHero = Integer.parseInt(request.params("heroId"));
+            heroDao.deleteHero(idOfHero);
+            response.redirect("/");
+            return null;
+        }, new HandlebarsTemplateEngine());
 
+        //get: delete a squad
+        get("/squads/:id/delete", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            int idOfSquad = Integer.parseInt(request.params("id"));
+            squadDao.deleteSquadById(idOfSquad);
+            response.redirect("/");
+            return null;
+        }, new HandlebarsTemplateEngine());
         //get: display new squad form
         get("/squads/new", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
@@ -66,12 +82,12 @@ public class App {
         get("/squads/:id", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             List<Squad> squads = squadDao.getAllSquads();
-            model.put("squad", squads);
+            model.put("squads", squads);
             int idOfSquadToFind = Integer.parseInt(request.params("id"));
             Squad foundSquad = squadDao.findById(idOfSquadToFind);
             model.put("squad", foundSquad);
             List<Hero> allHeroesFromSquad = squadDao.getAllHeroesBySquad(idOfSquadToFind);
-            model.put("hero", allHeroesFromSquad);
+            model.put("heroes", allHeroesFromSquad);
             model.put("squads", squadDao.getAllSquads());
             return new ModelAndView(model, "squads-detail.hbs");
         }, new HandlebarsTemplateEngine());
