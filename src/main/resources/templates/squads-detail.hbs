@@ -1,13 +1,34 @@
 {{#partial "content"}}
-    <h1>{{squad.name}}</h1>
-    <p>Members :</p>
-    <ul>
-        {{#each heroes}}
-            <li>
-                <p><a href="/squads/{{squad.id}}/heroes/{{id}}">{{name}}</a></p>
-            </li>
-        {{/each}}
-    </ul>
-    <a href="/squads/{{squad.id}}/delete">DELETE this Squad</a>
+<!--    <h1>{{squad.name}}</h1>-->
+<!--    <p>Members :</p>-->
+<!--    <ul>-->
+<!--        {{#each heroes}}-->
+<!--            <li>-->
+<!--                <p><a href="/squads/{{squad.id}}/heroes/{{id}}">{{name}}</a></p>-->
+<!--            </li>-->
+<!--        {{/each}}-->
+<!--    </ul>-->
+<!--    <a href="/squads/{{squad.id}}/delete">DELETE this Squad</a>-->
+    <div class = "row">
+        <div class="col-md-6">
+            <div class="card">
+                <img class="card-img-top img-responsive w-100" src="https://image.shutterstock.com/z/stock-vector-team-of-superheroes-687754144.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h3 class="card-title"> Name: {{squad.name}}</h3>
+                </div>
+                <h4>Members: </h4>
+                <div class="card-body">
+                    <ul>
+                        {{#each heroes}}
+                            <li>
+                                <p><a href="/squads/{{squad.id}}/heroes/{{id}}">{{name}}</a></p>
+                            </li>
+                        {{/each}}
+                    </ul>
+                    <a href="/squads/{{squad.id}}/delete">DELETE this Squad</a>
+                </div>
+            </div>
+        </div>
+    </div>
 {{/partial}}
 {{>layout.hbs}}
