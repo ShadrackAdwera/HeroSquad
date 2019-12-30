@@ -41,6 +41,6 @@ public class HeroTest {
     @Test
     public void squadMember_boolean() {
         Hero testValue = new Hero("Batman",38, "Rich","Human", 1);
-        assertFalse(testValue.squadMember());
+        assertTrue(testValue.squadMember());
     }
 }

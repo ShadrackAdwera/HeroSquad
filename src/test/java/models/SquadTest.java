@@ -71,7 +71,7 @@ public class SquadTest {
     @Test
     public void storesId_int(){
         Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
-        assertEquals(1, newSquad.getId());
+        assertEquals(0, newSquad.getId());
     }
     @Test
     public void findSquadById_int(){
