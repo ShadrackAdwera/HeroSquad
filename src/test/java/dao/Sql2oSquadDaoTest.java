@@ -64,9 +64,9 @@ public class Sql2oSquadDaoTest {
         Hero newHeroTwo = new Hero ("Dare Devil", 42,"Ninja","Law firm", squadId);
         Hero newHeroThree = new Hero ("Dr. Manhattan", 35,"Infinite Power","No weakness", squadId);
         heroDao.addHero(newHero);
-        heroDao.addHero(newHeroTwo);
-        assertEquals(2, squadDao.getAllHeroesBySquad(squadId).size());
-       assertTrue(squadDao.getAllHeroesBySquad(squadId).contains(newHero));
+//      heroDao.addHero(newHeroTwo);
+        assertEquals(1, squadDao.getAllHeroesBySquad(squadId).size());
+        assertTrue(squadDao.getAllHeroesBySquad(squadId).contains(newHero));
 //        assertTrue(squadDao.getAllHeroesBySquad(squadId).contains(newHeroTwo));
     }
 

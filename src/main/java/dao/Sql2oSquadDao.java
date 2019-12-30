@@ -12,8 +12,8 @@ public class Sql2oSquadDao implements SquadDao {
 
     @Override
     public void addSquad(Squad newSquad){
-        String sql = "INSERT INTO squads (Name, MaxSize, Cause) VALUES (:name, :maxSize, :cause)"; //raw sql
-        try(Connection con = sql2o.open()){ //try to open a connection
+        String sql = "INSERT INTO squads (name, maxsize, cause) VALUES (:name, :maxSize, :cause)";
+        try(Connection con = sql2o.open()){ //open a connection
             int id = (int) con.createQuery(sql, true) //make a new variable
                     .bind(newSquad) //map my argument onto the query so we can use information from it
                     .executeUpdate() //run it all
