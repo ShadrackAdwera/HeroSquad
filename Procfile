@@ -1,1 +1,1 @@
-web: java -cp target/classes/:target/dependency/* com.wedevol.xmpp.App
+web: java -cp target/classes/:target/dependency/* App.java
