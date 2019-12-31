@@ -15,66 +15,70 @@ public class SquadTest {
     }
 
     @Test
-    public void instantiatesCorrectly_boolean(){
-        Hero testValue = new Hero("Batman",38, "Rich","Human",1);
-        Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
+    public void instantiatesCorrectly_boolean() {
+        Hero testValue = new Hero("Batman", 38, "Rich", "Human", 1);
+        Squad newSquad = new Squad("Justice League", 5, "Eliminate Doomsday");
         assertTrue(newSquad instanceof Squad);
     }
 
     @Test
     public void storeSquadName_String() {
-        Hero testValue = new Hero("Batman",38, "Rich","Human",1);
-        Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
+        Hero testValue = new Hero("Batman", 38, "Rich", "Human", 1);
+        Squad newSquad = new Squad("Justice League", 5, "Eliminate Doomsday");
         assertEquals("Justice League", newSquad.getName());
     }
 
     @Test
     public void getSizeOfEachSquad_int() {
-        Hero testValue = new Hero("Batman",38, "Rich","Human",1);
-        Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
+        Hero testValue = new Hero("Batman", 38, "Rich", "Human", 1);
+        Squad newSquad = new Squad("Justice League", 5, "Eliminate Doomsday");
         assertEquals(5, newSquad.getMaxSize());
     }
 
     @Test
     public void getCauseOfSquad_String() {
-        Hero testValue = new Hero("Batman",38, "Rich","Human",1);
-        Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
+        Hero testValue = new Hero("Batman", 38, "Rich", "Human", 1);
+        Squad newSquad = new Squad("Justice League", 5, "Eliminate Doomsday");
         assertEquals("Eliminate Doomsday", newSquad.getCause());
     }
 
     @Test
     public void addHeroToSquad_List() {
         List<Hero> newHeroes = new ArrayList<>();
-        Hero testValue = new Hero("Batman",38, "Rich","Human",1);
-        Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
+        Hero testValue = new Hero("Batman", 38, "Rich", "Human", 1);
+        Squad newSquad = new Squad("Justice League", 5, "Eliminate Doomsday");
 
     }
+
     @Test
-    public void getAllHeroesInSquad_List(){
+    public void getAllHeroesInSquad_List() {
         List<Hero> allHeroesInSquad = new ArrayList<>();
-        Hero testValue = new Hero("Batman",38, "Rich","Human",1);
-        Hero testValue2 = new Hero("Flash",31, "Super Speed","Iris West",1);
-        Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
+        Hero testValue = new Hero("Batman", 38, "Rich", "Human", 1);
+        Hero testValue2 = new Hero("Flash", 31, "Super Speed", "Iris West", 1);
+        Squad newSquad = new Squad("Justice League", 5, "Eliminate Doomsday");
         allHeroesInSquad.add(testValue);
         allHeroesInSquad.add(testValue2);
         assertTrue(allHeroesInSquad.contains(testValue2));
     }
+
     @Test
-    public void getAllSquads_List(){
+    public void getAllSquads_List() {
         List<Squad> allSquads = new ArrayList<>();
-        Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
-        Squad newSquad2 = new Squad("Avengers",5,"Reverse the snap");
+        Squad newSquad = new Squad("Justice League", 5, "Eliminate Doomsday");
+        Squad newSquad2 = new Squad("Avengers", 5, "Reverse the snap");
         allSquads.add(newSquad);
         allSquads.add(newSquad2);
         assertTrue(allSquads.contains(newSquad));
     }
+
     @Test
-    public void storesId_int(){
-        Squad newSquad = new Squad("Justice League",5,"Eliminate Doomsday");
+    public void storesId_int() {
+        Squad newSquad = new Squad("Justice League", 5, "Eliminate Doomsday");
         assertEquals(0, newSquad.getId());
     }
+
     @Test
-    public void findSquadById_int(){
+    public void findSquadById_int() {
 
 
     }

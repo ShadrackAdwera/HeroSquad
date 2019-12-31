@@ -7,7 +7,8 @@ public class Squad {
     private int maxSize;
     private String cause;
     private int id;
-    public Squad(String name, int maxSize, String cause){
+
+    public Squad(String name, int maxSize, String cause) {
         this.name = name;
         this.maxSize = maxSize;
         this.cause = cause;

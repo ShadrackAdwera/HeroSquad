@@ -29,40 +29,43 @@ public class Sql2oSquadDaoTest {
     }
 
     @AfterClass
-    public static void shutDown() throws Exception{
+    public static void shutDown() throws Exception {
         conn.close();
     }
 
     @Test
-    public void returnSquadId() throws Exception{
+    public void returnSquadId() throws Exception {
         Squad newSquad = setUpSquad();
         int squadId = newSquad.getId();
         squadDao.addSquad(newSquad);
         assertNotEquals(squadId, newSquad.getId());
     }
+
     @Test
-    public void squadsCanBeFoundById() throws Exception{
+    public void squadsCanBeFoundById() throws Exception {
         Squad newSquad = setUpSquad();
         squadDao.addSquad(newSquad);
         Squad foundSquad = squadDao.findById(newSquad.getId());
         assertEquals(newSquad, foundSquad);
     }
+
     @Test
-    public void addedSquadsAreReturned() throws Exception{
+    public void addedSquadsAreReturned() throws Exception {
         Squad newSquad = setUpSquad();
-        Squad newSquadTwo = new Squad("Justice League",7,"Stop Doomsday");
+        Squad newSquadTwo = new Squad("Justice League", 7, "Stop Doomsday");
         squadDao.addSquad(newSquad);
         squadDao.addSquad(newSquadTwo);
         assertEquals(2, squadDao.getAllSquads().size());
     }
+
     @Test
     public void getAllHeroesInSquadReturned() throws Exception {
         Squad newSquads = setUpSquad();
         squadDao.addSquad(newSquads);
         int squadId = newSquads.getId();
-        Hero newHero = new Hero ("Pete Casteglioni", 42,"The Punisher","No weakness", squadId);
-        Hero newHeroTwo = new Hero ("Dare Devil", 42,"Ninja","Law firm", squadId);
-        Hero newHeroThree = new Hero ("Dr. Manhattan", 35,"Infinite Power","No weakness", squadId);
+        Hero newHero = new Hero("Pete Casteglioni", 42, "The Punisher", "No weakness", squadId);
+        Hero newHeroTwo = new Hero("Dare Devil", 42, "Ninja", "Law firm", squadId);
+        Hero newHeroThree = new Hero("Dr. Manhattan", 35, "Infinite Power", "No weakness", squadId);
         heroDao.addHero(newHero);
 //      heroDao.addHero(newHeroTwo);
         assertEquals(1, squadDao.getAllHeroesBySquad(squadId).size());
@@ -71,7 +74,7 @@ public class Sql2oSquadDaoTest {
     }
 
     //helper method
-    public Squad setUpSquad(){
-        return new Squad("Justice League",7,"Stop Doomsday");
+    public Squad setUpSquad() {
+        return new Squad("Justice League", 7, "Stop Doomsday");
     }
 }
