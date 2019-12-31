@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="models.HeroTest" time="0.005" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="models.HeroTest" time="0.004" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.5+10"/>
@@ -24,23 +24,23 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="classworlds.conf" value="/opt/maven/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
-    <property name="maven.conf" value="/usr/share/maven/conf"/>
+    <property name="maven.conf" value="/opt/maven/conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="55.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="4.15.0-72-generic"/>
-    <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
+    <property name="library.jansi.path" value="/opt/maven/lib/jansi-native"/>
     <property name="user.home" value="/home/adwesh"/>
     <property name="user.timezone" value="Africa/Nairobi"/>
     <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.specification.version" value="11"/>
     <property name="user.name" value="adwesh"/>
-    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="java.class.path" value="/opt/maven/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher heroku:deploy"/>
@@ -52,7 +52,7 @@
     <property name="java.version" value="11.0.5"/>
     <property name="securerandom.source" value="file:/dev/./urandom"/>
     <property name="java.vendor" value="AdoptOpenJDK"/>
-    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="maven.home" value="/opt/maven"/>
     <property name="file.separator" value="/"/>
     <property name="java.version.date" value="2019-10-15"/>
     <property name="java.vendor.url.bug" value="https://github.com/AdoptOpenJDK/openjdk-build/issues"/>
@@ -63,9 +63,9 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase classname="models.HeroTest" name="storesWeaknesses_String" time="0"/>
-  <testcase classname="models.HeroTest" name="storesName_String" time="0"/>
+  <testcase classname="models.HeroTest" name="storesName_String" time="0.001"/>
   <testcase classname="models.HeroTest" name="squadMember_boolean" time="0.001"/>
   <testcase classname="models.HeroTest" name="instantiatesCorrectly_boolean" time="0.001"/>
-  <testcase classname="models.HeroTest" name="storesSuperPowers_String" time="0.002"/>
-  <testcase classname="models.HeroTest" name="storesAge_int" time="0.001"/>
+  <testcase classname="models.HeroTest" name="storesSuperPowers_String" time="0.001"/>
+  <testcase classname="models.HeroTest" name="storesAge_int" time="0"/>
 </testsuite>

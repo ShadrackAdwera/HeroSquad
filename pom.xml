@@ -6,7 +6,7 @@
 
   <groupId>org.example</groupId>
   <artifactId>hero-squad</artifactId>
-  <version>1.0</version>
+  <version>1.0-SNAPSHOT</version>
 
   <dependencies>
 <!-- We need to list out ALL dependencies our project needs. If you have dependencies not listed here, but sure to add them -->
@@ -84,7 +84,7 @@
           <!-- Change this to YOUR application name! -->
           <appName>adwera-hero-squad</appName>
           <processTypes>
-            <web>java -jar target/adwera-hero-squad-1.0-jar-with-dependencies.jar</web>
+            <web>java -jar target/hero-squad-1.0-jar-with-dependencies.jar</web>
           </processTypes>
         </configuration>
       </plugin>
