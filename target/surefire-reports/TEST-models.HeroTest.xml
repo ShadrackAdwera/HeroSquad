@@ -43,7 +43,7 @@
     <property name="java.class.path" value="/opt/maven/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher heroku:deploy"/>
     <property name="java.home" value="/home/adwesh/.sdkman/candidates/java/11.0.5.hs-adpt"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -63,9 +63,9 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase classname="models.HeroTest" name="storesWeaknesses_String" time="0.001"/>
-  <testcase classname="models.HeroTest" name="storesName_String" time="0"/>
-  <testcase classname="models.HeroTest" name="squadMember_boolean" time="0.003"/>
+  <testcase classname="models.HeroTest" name="storesName_String" time="0.001"/>
+  <testcase classname="models.HeroTest" name="squadMember_boolean" time="0.001"/>
   <testcase classname="models.HeroTest" name="instantiatesCorrectly_boolean" time="0"/>
-  <testcase classname="models.HeroTest" name="storesSuperPowers_String" time="0.001"/>
-  <testcase classname="models.HeroTest" name="storesAge_int" time="0.001"/>
+  <testcase classname="models.HeroTest" name="storesSuperPowers_String" time="0.003"/>
+  <testcase classname="models.HeroTest" name="storesAge_int" time="0"/>
 </testsuite>
