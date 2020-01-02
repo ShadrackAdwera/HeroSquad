@@ -6,7 +6,7 @@
 
 ## Description
 
-A hero object is used to store hero properties such as name, age etc the hero is in turn assigned to a squad through the squad id property. A postgres database has been used to store the objects oce created through the form inputs.
+A hero object is used to store hero properties such as name, age etc the hero is in turn assigned to a squad through the squad id property. A postgres database has been used to store the objects once created through the form inputs.
 
 ## Setup/Installation Requirements
 
@@ -40,13 +40,13 @@ Hero Squad
     * INPUT: "Clicked delete squad link"
     * OUTPUT: "Home page"
 
-## Overview 
+## Overview
 
 * Upon loading the website, the homepage is displayed
 
 ![landing-page](src/main/resources/public/images/readme1.png)
 
-* Upon clicking on the add a hero link, a user is requested to create a squad first
+* A user is requested to create a squad first when they click on the add a hero link
 
 ![add-squad](src/main/resources/public/images/readme2.png)
 
@@ -85,7 +85,8 @@ Hero Squad
 
 ## Known Bugs
 
-* Hero can participate in more than one squad
+* Incase any bug is found, or a request for a new fuctionality is needed, kindly open an issue [here](https://github.com/ShadrackAdwera/HeroSquad/issues)
+
 
 ## Technologies Used
 
@@ -111,4 +112,4 @@ Incase of any feedback/comments feel free to contact me at adweshshaddie@gmail.c
 
 #### Copyright (c) 2019 Shadrack Adwera
 
-#### Licenced under the [MIT License](LICENSE)  
+#### Licenced under the [MIT License](LICENSE)
