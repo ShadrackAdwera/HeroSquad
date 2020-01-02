@@ -54,10 +54,6 @@ Hero Squad
 
 ![squad-add](src/main/resources/public/images/readme3.png)
 
-* The squad can be viewed on clicking the squad name which is nested on the navbar item: squad list
-
-![view-squad](src/main/resources/public/images/readme4.png)
-
 * After adding a squad, a hero can now be created and assigned to the created squad
 
 ![landing-page](src/main/resources/public/images/readme5.png)
@@ -65,6 +61,10 @@ Hero Squad
 * Hero details can be viewed on clicking the hero name on the home page
 
 ![landing-page](src/main/resources/public/images/readme6.png)
+
+* The squad and its heroes can be viewed on clicking the squad name which is nested on the navbar item: squad list
+
+![view-squad](src/main/resources/public/images/readme7.png)
 
 ## RESTful routing
 
