@@ -78,7 +78,7 @@ Hero Squad
 | heroes      | /heroes                               | POST          | Process add a hero form     |
 | hero-detail | /squads/:squadId/heroes/:heroId       | GET           | Show an individual hero     |
 | index       | /squads/delete                        | GET           | Delete all squads and heroes|
-| index       | /heroes/delete|                       | GET           | Delete all heroes           |
+| index       | /heroes/delete                        | GET           | Delete all heroes           |
 | index       | /squads/:squadId/heroes/:heroId/delete| GET           | Delete a hero               |
 |  index      | /squads/:id/delete                    | GET           | Delete a squad              |
 | wars        | /wars                                 | GET           | Show the coming soon page   |
