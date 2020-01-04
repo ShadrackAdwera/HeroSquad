@@ -66,6 +66,8 @@ Hero Squad
 
 ![view-squad](src/main/resources/public/images/readme7.png)
 
+* Check out the live link: [](https://spark-hero-squad.herokuapp.com/)
+
 ## RESTful routing
 
 | Route Name  | URL                                   | HTTP Verb     | Description                 |

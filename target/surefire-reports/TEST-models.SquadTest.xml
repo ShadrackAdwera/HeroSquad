@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="9" failures="0" name="models.SquadTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="9" failures="0" name="models.SquadTest" time="0.007" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="11.0.5+10"/>
@@ -66,9 +66,9 @@
   <testcase classname="models.SquadTest" name="storeSquadName_String" time="0"/>
   <testcase classname="models.SquadTest" name="findSquadById_int" time="0"/>
   <testcase classname="models.SquadTest" name="addHeroToSquad_List" time="0"/>
-  <testcase classname="models.SquadTest" name="getAllSquads_List" time="0"/>
+  <testcase classname="models.SquadTest" name="getAllSquads_List" time="0.001"/>
   <testcase classname="models.SquadTest" name="instantiatesCorrectly_boolean" time="0"/>
-  <testcase classname="models.SquadTest" name="getAllHeroesInSquad_List" time="0"/>
-  <testcase classname="models.SquadTest" name="storesId_int" time="0.002"/>
+  <testcase classname="models.SquadTest" name="getAllHeroesInSquad_List" time="0.001"/>
+  <testcase classname="models.SquadTest" name="storesId_int" time="0.005"/>
   <testcase classname="models.SquadTest" name="getSizeOfEachSquad_int" time="0"/>
 </testsuite>
