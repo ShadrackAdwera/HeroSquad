@@ -68,7 +68,7 @@ Hero Squad
 
 * Check out the live link: <https://shaddie-hero-squad.herokuapp.com/>
 
-## RESTful routing
+## Routing
 
 | Route Name  | URL                                   | HTTP Verb     | Description                 |
 |---          |---                                    |---            |---                          |
