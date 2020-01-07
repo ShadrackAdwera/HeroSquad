@@ -66,7 +66,7 @@ Hero Squad
 
 ![view-squad](src/main/resources/public/images/readme7.png)
 
-* Check out the live link: <https://shaddie-hero-squad.herokuapp.com/>
+* Check out the live link: <http://adwera-hero-squad.herokuapp.com/>
 
 ## Routing
 
